@@ -1,0 +1,42 @@
+# experiments/configs/experiment_001.yaml
+# Baseline 4-qubit QGAN experiment for digits 0 and 1
+
+experiment:
+  name: "qgan_4qubit_baseline"
+  description: "Minimal viable QGAN with 4 qubits, 4x4 output images"
+  seed: 42
+
+data:
+  csv_path: "data/raw/EMNIST_16x16_Dataset.csv"
+  target_digits: [0, 1]
+  target_size: [4, 4]
+  samples_per_digit: 500
+  batch_size: 32
+  normalize_range: [0, 1]
+
+generator:
+  n_qubits: 4
+  n_layers: 2
+  latent_dim: 4
+  entanglement: "linear"
+
+discriminator:
+  type: "mlp"
+  hidden_dims: [32, 16]
+  dropout: 0.3
+
+training:
+  n_epochs: 50
+  learning_rate_g: 0.005
+  learning_rate_d: 0.0005
+  n_critic: 1
+  optimizer_g: "adam"
+  save_interval: 10
+  label_smoothing: 0.1
+  use_lr_scheduler: true
+  grad_clip: 1.0
+
+evaluation:
+  compute_fid: false
+  compute_coverage: true
+  n_eval_samples: 100

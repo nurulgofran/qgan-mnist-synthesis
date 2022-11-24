@@ -1,0 +1,152 @@
+# ===========================================
+# QGAN-MNIST Project .gitignore
+# ===========================================
+
+# ==== Python ====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ==== Virtual Environments ====
+venv/
+ENV/
+env/
+.venv/
+.conda/
+conda-env/
+
+# ==== IDE & Editors ====
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+*.sublime-project
+
+# ==== Jupyter Notebook ====
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+notebooks/*.html
+
+# ==== Testing ====
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# ==== Data Files (Large) ====
+data/raw/*.csv
+data/processed/*.npz
+*.npz
+*.npy
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+
+# ==== Experiment Outputs ====
+outputs/
+experiments/results/
+experiments/checkpoints/
+results/
+
+# ==== Generated Images & Plots ====
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.svg
+!README_images/  # Keep images used in README
+
+# ==== Model Checkpoints ====
+*.pt
+*.pth
+*.ckpt
+checkpoints/
+models/
+saved_models/
+
+# ==== Training Artifacts ====
+*.onnx
+tensorboard_logs/
+runs/
+wandb/
+mlruns/
+
+# ==== Logs ====
+*.log
+logs/
+mcp_security.log
+
+# ==== OS Files ====
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ==== Temporary Files ====
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# ==== PDF & Documents ====
+*.pdf
+
+# ==== Project Internal Docs ====
+project_explanation.md
+project_plan.md
+notes/
+drafts/
+
+# ==== GitHub Config ====
+.github/
+
+# ==== Secrets & Config ====
+.env
+.env.*
+*.secret
+config.local.yaml
+secrets.yaml
+
+# ==== Qiskit Cache ====
+.qiskit/
+
+# ==== Comparison Results ====
+comparison_*/
+*_comparison/
+
+
+# Agent skills/config
+.agent/
