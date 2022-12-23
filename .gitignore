@@ -150,3 +150,11 @@ comparison_*/
 
 # Agent skills/config
 .agent/
+
+# Testing tools
+.testsprite/
+
+# AI assistant configs
+.claude/
+
+.gemini/
