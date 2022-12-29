@@ -158,3 +158,12 @@ comparison_*/
 .claude/
 
 .gemini/
+
+# ===== SENSITIVE FILES - DO NOT COMMIT =====
+keystore.properties
+*.keystore
+*.jks
+google-services.json
+GoogleService-Info.plist
+!.env.example
+dazl.config.json
