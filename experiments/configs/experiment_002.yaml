@@ -1,0 +1,42 @@
+# experiments/configs/experiment_002.yaml
+# 8-qubit QGAN experiment for full 16x16 images
+
+experiment:
+  name: "qgan_8qubit_full"
+  description: "Full resolution QGAN with 8 qubits, 16x16 output images"
+  seed: 42
+
+data:
+  csv_path: "data/raw/EMNIST_16x16_Dataset.csv"
+  target_digits: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  target_size: [16, 16]
+  samples_per_digit: 200
+  batch_size: 16
+  normalize_range: [0, 1]
+
+generator:
+  n_qubits: 8
+  n_layers: 3
+  latent_dim: 8
+  entanglement: "linear"
+
+discriminator:
+  type: "mlp"
+  hidden_dims: [128, 64, 32]
+  dropout: 0.3
+
+training:
+  n_epochs: 100
+  learning_rate_g: 0.003
+  learning_rate_d: 0.0003
+  n_critic: 2
+  optimizer_g: "adam"
+  save_interval: 20
+  label_smoothing: 0.1
+  use_lr_scheduler: true
+  grad_clip: 1.0
+
+evaluation:
+  compute_fid: true
+  compute_coverage: true
+  n_eval_samples: 200
